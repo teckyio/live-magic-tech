@@ -1,0 +1,6 @@
+[
+  [
+    "https://www\\.facebook\\.com/groups/.*",
+    [["connect-src", "connect-src http://localhost:8100"]]
+  ]
+]

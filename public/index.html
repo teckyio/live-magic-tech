@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+  </head>
+  <body>
+    <div id="postList" data-template="post" data-bind="posts"></div>
+
+    <template data-name="post">
+      <div class="post">
+        <a data-text="nickname" data-href="user_href"></a>
+        <div>
+          <a data-href="post_href">
+            <time data-text="post_time"></time>
+          </a>
+        </div>
+        <p data-text="content"></p>
+      </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/data-template@1.4/base.js"></script>
+    <script>
+      getJSON('/posts', json => {
+        console.log(json)
+        for (let post of json.posts) {
+          post.user_href = `https://www.facebook.com/groups/${post.group_id}/user/${post.user_id}/`
+          post.post_href = `https://www.facebook.com/groups/${post.group_id}/posts/${post.post_id}/`
+        }
+        renderTemplate(postList, json)
+      })
+    </script>
+  </body>
+</html>
