@@ -25,6 +25,8 @@
 
   let group_id = location.pathname.match(/\/groups\/(\d+)/)[1]
 
+  console.log({ group_id })
+
   async function main() {
     console.log('running main()...')
 
@@ -115,7 +117,7 @@
     }
     console.log(posts)
 
-    fetch('http://localhost:8100/posts/fb', {
+    fetch('https://localhost:8100/posts/fb', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

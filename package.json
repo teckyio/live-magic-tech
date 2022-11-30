@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node-dev server/app.ts",
     "test": "tsc --noEmit",
     "build": "tsc -p ."
   },

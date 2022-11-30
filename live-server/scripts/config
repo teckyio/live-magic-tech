@@ -1,0 +1,4 @@
+user=node
+host=tutormatch.liveviews.cc
+root_dir=/home/node/workspace/github.com/beenotung/tutormatch/live-server
+pm2_name="tutormatch"

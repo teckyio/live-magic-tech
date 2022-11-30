@@ -15,6 +15,33 @@
 ////////////////////////////////////
 
 
+method
+------
+id integer PK
+method text unique
+
+
+url
+---
+id integer PK
+url text unique
+
+
+user_agent
+----------
+id integer PK
+user_agent text unique
+
+
+request_log
+-----------
+id integer PK
+method_id integer FK >- method.id
+url_id integer FK >- url.id
+user_agent_id integer NULL FK >- user_agent.id
+timestamp integer
+
+
 fb_user
 -------
 id integer PK
@@ -30,8 +57,8 @@ name text
 fb_post
 -------
 id integer PK
-post_time timestamp
+post_time datetime
 content text
 fb_user_id integer FK >- fb_user.id
 fb_group_id integer FK >- fb_group.id
-skip_time timestamp null
+skip_time timestamp NULL
