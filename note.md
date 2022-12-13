@@ -1,3 +1,5 @@
+# 冷門科技開箱：自動補習配對
+
 facebook groups:
 
 - https://www.facebook.com/groups/1111303886318469/
@@ -27,3 +29,10 @@ facebook groups:
 - [x] html/http streaming
 - [x] spdy (http2)
 - [x] url-router.ts (isomorphic url based router)
+
+# session 3
+
+- [x] decorator
+- [x] nest-client
+- [x] tsc-macro
+- [x] better-sql
